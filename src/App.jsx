@@ -1,9 +1,42 @@
-import React from "react";
+import styles from "./style";
 
+import {
+  Hero,
+  Navbar,
+  Stats,
+  Business,
+  Billing,
+  CardDeal,
+  Testimonial,
+  Client,
+  CTA,
+  Footer,
+} from "./components";
 const App = () => {
   return (
-    <div className="bg-blue-500 w-full overflow-hidden">
-      <h1>g</h1>
+    <div className="bg-primary w-full overflow-hidden">
+      <div className={`${styles.paddingX} ${styles.flexCenter}`}>
+        <div className={`${styles.boxWidth}`}>
+          <Navbar />
+        </div>
+      </div>
+      <div className={`bg-primary ${styles.flexStart}`}>
+        <div className={`${styles.boxWidth}`}>
+          <Hero />
+        </div>
+      </div>
+      <div className={`bg-primary ${styles.paddingX} ${styles.flexStart}`}>
+        <div className={`${styles.boxWidth}`}>
+          <Stats />
+          <Business />
+          <CTA />
+          <Billing />
+          <Testimonial />
+          <Client />
+          <CardDeal />
+          <Footer />
+        </div>
+      </div>
     </div>
   );
 };
